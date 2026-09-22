@@ -17,7 +17,12 @@
 - [임시투석·여행투석](https://www.drnoh.co.kr/travel-dialysis.html): 일산 방문·출장 중 투석
 - [단백뇨·혈뇨 클리닉](https://www.drnoh.co.kr/proteinuria-hematuria.html): 거품뇨·소변 이상 검사
 - [예방접종](https://www.drnoh.co.kr/vaccination.html): 대상포진·폐렴구균·독감·B형간염
-- [신장내과](https://www.drnoh.co.kr/nephrology.html): 만성콩팥병·단백뇨·혈뇨 진료
+- [신장내과](https://www.drnoh.co.kr/nephrology.html): 일산 신장내과 — 만성콩팥병·단백뇨·혈뇨 진료
+- [고혈압](https://www.drnoh.co.kr/hypertension.html): 일산 고혈압 — 가정혈압 기반 진단과 콩팥 검사 병행
+- [당뇨병](https://www.drnoh.co.kr/diabetes.html): 일산 당뇨 — 혈당·콩팥 합병증(당뇨병성 신증) 관리
+- [통풍](https://www.drnoh.co.kr/gout.html): 일산 통풍 — 요산 수치 관리와 콩팥 보호
+- [고지혈증](https://www.drnoh.co.kr/dyslipidemia.html): 일산 고지혈증 — 콜레스테롤 관리
+- [건강검진·내시경](https://www.drnoh.co.kr/checkup.html): 일산 건강검진 — 초음파 포함 일반검진(국가검진 미시행)
 - [진료시간·오시는길](https://www.drnoh.co.kr/location.html): 주엽역에서 오는 길
 - [자주 묻는 질문](https://www.drnoh.co.kr/faq.html)
 

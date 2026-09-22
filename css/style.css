@@ -226,11 +226,17 @@ tbody tr:hover td{background:#FAFAFB}
 .split .prose{max-width:none}
 .pblock{background:#fff;border-radius:var(--r);border-top:4px solid var(--char);box-shadow:var(--sh);padding:34px 36px;margin:0 0 26px}
 .pblock:nth-of-type(even){border-top-color:var(--red)}
-.prose h2{font-size:23px;margin:0 0 16px;position:relative;padding-left:18px}
+.prose h2{font-size:23px;margin:48px 0 20px;position:relative;padding-left:18px}
+.prose h2:first-child{margin-top:0}
 .prose h2::before{content:"";position:absolute;left:0;top:8px;width:6px;height:22px;background:var(--red);border-radius:2px}
-.prose h3{font-size:17.5px;margin:24px 0 8px;color:var(--ink)}
-.prose ul,.prose ol{margin:0 0 1.1em;padding-left:22px}
-.prose li{margin:7px 0;font-size:15.5px}
+.prose h3{font-size:17.5px;margin:30px 0 10px;color:var(--ink)}
+.prose ul,.prose ol{margin:0 0 1.5em;padding-left:22px}
+.prose li{margin:10px 0;font-size:15.5px;line-height:1.75}
+.prose table{margin:18px 0 8px}
+.prose .table-wrap{margin:18px 0 8px}
+.prose .table-wrap table{margin:0}
+.prose .note{margin:18px 0 8px}
+.prose .gallery{margin:22px 0 6px}
 .prose li::marker{color:var(--red)}
 .prose strong{color:var(--ink)}
 .prose > p,.pblock p{font-size:15.5px}

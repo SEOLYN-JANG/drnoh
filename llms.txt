@@ -14,6 +14,9 @@
 - [인공신장실 안내](https://www.drnoh.co.kr/dialysis-center.html): 시설·운영 원칙·투석 절차
 - [혈액투석 치료](https://www.drnoh.co.kr/hemodialysis.html): 혈액투석 원리와 과정
 - [야간투석](https://www.drnoh.co.kr/night-dialysis.html): 직장인 투석 안내
+- [임시투석·여행투석](https://www.drnoh.co.kr/travel-dialysis.html): 일산 방문·출장 중 투석
+- [단백뇨·혈뇨 클리닉](https://www.drnoh.co.kr/proteinuria-hematuria.html): 거품뇨·소변 이상 검사
+- [예방접종](https://www.drnoh.co.kr/vaccination.html): 대상포진·폐렴구균·독감·B형간염
 - [신장내과](https://www.drnoh.co.kr/nephrology.html): 만성콩팥병·단백뇨·혈뇨 진료
 - [진료시간·오시는길](https://www.drnoh.co.kr/location.html): 주엽역에서 오는 길
 - [자주 묻는 질문](https://www.drnoh.co.kr/faq.html)

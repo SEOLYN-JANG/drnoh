@@ -93,8 +93,8 @@ p:last-child{margin-bottom:0}
 .hh-panel::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border:26px solid rgba(215,0,15,.16);border-radius:50%}
 .hh-kicker{display:inline-flex;align-items:center;gap:10px;color:var(--red-lite);font-weight:800;font-size:13.5px;letter-spacing:.14em;margin-bottom:22px}
 .hh-kicker::before{content:"";width:26px;height:3px;background:var(--red)}
-.hero-half h1{font-size:48px;line-height:1.24;color:#fff;position:relative;z-index:1}
-.hero-half h1 em{font-style:normal;color:var(--red-lite)}
+.hero-half h1,.hero-half .hh-title{margin:0;font-size:48px;line-height:1.24;font-weight:800;letter-spacing:-.02em;text-wrap:balance;color:#fff;position:relative;z-index:1}
+.hero-half h1 em,.hero-half .hh-title em{font-style:normal;color:var(--red-lite)}
 .hero-half .lead{margin:22px 0 30px;font-size:17.5px;line-height:1.8;color:rgba(255,255,255,.72);max-width:480px;position:relative;z-index:1}
 .hh-actions{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
 .hh-media{position:relative;min-height:400px}
@@ -105,9 +105,24 @@ p:last-child{margin-bottom:0}
 @media(max-width:960px){
   .hero-half{grid-template-columns:1fr}
   .hh-panel{padding:56px 24px}
-  .hero-half h1{font-size:34px}
+  .hero-half h1,.hero-half .hh-title{font-size:34px}
   .hh-media{min-height:300px}
 }
+
+/* ---------- 히어로 슬라이더 ---------- */
+.hero-slider{position:relative;overflow:hidden}
+.hero-slider .slides{position:relative}
+.hero-slider .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .55s ease;z-index:1}
+.hero-slider .slide.is-active{position:relative;opacity:1;visibility:visible;z-index:2}
+.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:7;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(28,31,36,.35);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s;backdrop-filter:blur(2px)}
+.hero-arrow:hover{background:var(--red);border-color:var(--red)}
+.hero-arrow svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero-arrow.prev{left:18px}
+.hero-arrow.next{right:18px}
+.hero-dots{position:absolute;left:50%;transform:translateX(-50%);bottom:58px;display:flex;gap:9px;z-index:7}
+.hero-dot{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.45);cursor:pointer;transition:background .15s,width .2s}
+.hero-dot.is-active{width:26px;border-radius:6px;background:var(--red)}
+@media(max-width:960px){.hero-arrow{display:none}.hero-dots{bottom:14px}}
 
 /* ---------- 레드 티커 ---------- */
 .trust-wrap{margin-top:-40px;position:relative;z-index:6}

@@ -33,4 +33,13 @@
     },{passive:true});
     if(sl.length>1&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)start();
   }
+
+  var rot=document.querySelector('.hh-rotate');
+  if(rot){
+    var ri=[].slice.call(rot.querySelectorAll('img'));
+    if(ri.length>1&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      var rk=0;
+      setInterval(function(){rk=(rk+1)%ri.length;ri.forEach(function(im,j){im.classList.toggle('is-on',j===rk);});},4200);
+    }
+  }
 })();

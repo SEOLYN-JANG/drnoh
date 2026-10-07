@@ -42,4 +42,31 @@
       setInterval(function(){rk=(rk+1)%ri.length;ri.forEach(function(im,j){im.classList.toggle('is-on',j===rk);});},4200);
     }
   }
+
+  /* 공지 배너: data/notices.json에서 노출 기간 내 banner 공지를 헤더 위에 표시 */
+  (function(){
+    if(/notices\.html$/.test(location.pathname))return;
+    var ms=document.querySelector('script[src*="js/main.js"]');
+    var base=ms?ms.getAttribute('src').split('js/main.js')[0]:'';
+    fetch(base+'data/notices.json?b='+Math.floor(Date.now()/300000))
+      .then(function(r){if(!r.ok)throw 0;return r.json();})
+      .then(function(d){
+        var now=new Date();
+        var ymd=now.getFullYear()+'-'+('0'+(now.getMonth()+1)).slice(-2)+'-'+('0'+now.getDate()).slice(-2);
+        var act=(d.items||[]).filter(function(n){return n.banner&&(!n.start||n.start<=ymd)&&(!n.end||ymd<=n.end);});
+        if(!act.length)return;
+        act.sort(function(a,b){return String(b.created||'').localeCompare(String(a.created||''));});
+        var n=act[0];
+        try{if(sessionStorage.getItem('nbx-'+n.id))return;}catch(e){}
+        var band=document.createElement('div');band.className='notice-band';
+        var w=document.createElement('div');w.className='wrap';
+        var tag=document.createElement('span');tag.className='nb-tag'+(n.type==='휴진'?' is-rest':'');tag.textContent=n.type||'안내';
+        var a=document.createElement('a');a.className='nb-link';a.href=base+'notices.html';a.textContent=n.title||'';
+        var x=document.createElement('button');x.className='nb-x';x.type='button';x.setAttribute('aria-label','공지 닫기');x.textContent='×';
+        x.addEventListener('click',function(){try{sessionStorage.setItem('nbx-'+n.id,'1');}catch(e){}band.parentNode.removeChild(band);});
+        w.appendChild(tag);w.appendChild(a);w.appendChild(x);band.appendChild(w);
+        var hd=document.querySelector('.site-header');
+        if(hd)hd.parentNode.insertBefore(band,hd);
+      }).catch(function(){});
+  })();
 })();

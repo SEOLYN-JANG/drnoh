@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>노승현내과의원 관리자</title>
+<link rel="icon" href="../img/logo.png" type="image/png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--red:#D7000F;--red-deep:#B0000C;--red-pale:#FDECED;--ink:#1C1F24;--body:#3D4148;--muted:#6B7280;
+--line:#E3E5E9;--line2:#D5D8DD;--bg:#F3F4F6;--panel:#F5F6F8;--char:#23262B}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Pretendard Variable",Pretendard,-apple-system,"Malgun Gothic",sans-serif;background:var(--bg);color:var(--body);font-size:15.5px;line-height:1.6;word-break:keep-all}
+.top{background:#fff;border-bottom:1px solid var(--line)}
+.top .in{max-width:1020px;margin:0 auto;padding:0 20px;min-height:60px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.top b{font-size:17px;color:var(--ink)}
+.top b span{color:var(--red)}
+.wrap{max-width:1020px;margin:0 auto;padding:26px 20px 70px}
+h2{font-size:21px;color:var(--ink);letter-spacing:-.02em;margin:0 0 6px}
+.hint{font-size:13.5px;color:var(--muted);margin:0 0 18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:18px;box-shadow:0 6px 18px rgba(28,31,36,.05)}
+.tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.tab{border:1px solid var(--line2);background:#fff;color:var(--body);font:inherit;font-weight:700;font-size:15px;padding:11px 20px;border-radius:9px;cursor:pointer}
+.tab.on{background:var(--char);border-color:var(--char);color:#fff}
+label{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin:0 0 6px}
+input[type=text],input[type=date],input[type=number],input[type=password],select,textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--line2);border-radius:8px;padding:10px 12px}
+textarea{resize:vertical;min-height:120px;line-height:1.7}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(215,0,15,.25);border-color:var(--red)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.row>div{flex:1;min-width:150px}
+.btn{display:inline-flex;align-items:center;gap:7px;border:1.5px solid transparent;font:inherit;font-weight:700;font-size:14.5px;padding:10px 18px;border-radius:8px;cursor:pointer;background:var(--char);color:#fff}
+.btn:hover{background:#15181c}
+.btn.red{background:var(--red)}
+.btn.red:hover{background:var(--red-deep)}
+.btn.ghost{background:#fff;color:var(--ink);border-color:var(--line2)}
+.btn.ghost:hover{border-color:var(--ink)}
+.btn.sm{padding:6px 12px;font-size:13px;border-radius:7px}
+.btn[disabled]{opacity:.5;cursor:default}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{background:var(--panel);color:var(--ink);font-size:13px}
+td input{padding:7px 9px;font-size:14px}
+.tag{display:inline-block;font-size:11.5px;font-weight:800;border-radius:4px;padding:3px 8px;background:var(--char);color:#fff;white-space:nowrap}
+.tag.rest,.tag.wait{background:var(--red)}
+.tag.ok{background:#1F7A4D}
+.msg{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:9px;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center;z-index:9}
+.msg.show{opacity:1}
+.login{max-width:430px;margin:70px auto 0}
+.login .card{padding:30px}
+.login h1{font-size:22px;color:var(--ink);margin:0 0 4px}
+.login p{font-size:13.5px;color:var(--muted);margin:0 0 18px}
+.list-title{font-weight:700;color:var(--ink)}
+.sub{font-size:12.5px;color:var(--muted)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.notice-note{background:var(--red-pale);border:1px solid #F3CDD0;border-radius:9px;padding:12px 16px;font-size:13.5px;color:var(--ink);margin:0 0 16px}
+hr{border:0;border-top:1px solid var(--line);margin:20px 0}
+.grp{border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px;background:#fff}
+.grp .gh{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.grp .gh input{font-weight:700}
+.draft-body{white-space:pre-line;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;margin:8px 0 0}
+@media(max-width:640px){.top .in{min-height:54px}.wrap{padding:18px 14px 60px}.card{padding:16px}th,td{padding:7px 6px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <b>노승현내과의원 <span>관리자</span></b>
+  <button class="btn ghost sm" id="btnLogout" hidden>로그아웃</button>
+</div></header>
+
+<div class="login" id="loginView">
+  <div class="card">
+    <h1>관리자 로그인</h1>
+    <p>관리자 키를 입력하세요. 키는 하오커뮤니케이션에서 발급해 드립니다.<br>문의: 하오커뮤니케이션 담당자</p>
+    <label for="inKey">관리자 키</label>
+    <input type="password" id="inKey" autocomplete="off" placeholder="github_pat_…">
+    <div style="margin-top:14px"><button class="btn red" id="btnLogin">접속</button></div>
+    <p id="loginErr" style="color:var(--red);font-weight:700;margin:12px 0 0" hidden></p>
+  </div>
+</div>
+
+<main class="wrap" id="mainView" hidden>
+  <div class="tabs">
+    <button class="tab on" data-tab="nt">공지 · 휴진 안내</button>
+    <button class="tab" data-tab="nb">비급여 수가</button>
+    <button class="tab" data-tab="dr">칼럼 초안</button>
+  </div>
+
+  <!-- 공지 -->
+  <section id="tab-nt">
+    <div class="card">
+      <h2 id="ntFormTitle">새 공지 등록</h2>
+      <p class="hint">저장하면 홈페이지 공지사항 페이지에 올라가고, "메인 배너 표시"를 켜면 노출 기간 동안 모든 페이지 상단에 띠 배너로 표시됩니다.</p>
+      <div class="row">
+        <div style="flex:2.2"><label>제목</label><input type="text" id="ntTitle" placeholder="예: 10월 9일(한글날) 휴진 안내"></div>
+        <div><label>유형</label><select id="ntType"><option>안내</option><option>휴진</option></select></div>
+      </div>
+      <div style="margin-top:12px"><label>내용</label><textarea id="ntBody" placeholder="예: 10월 9일(금) 한글날은 휴진합니다. 투석 일정은 개별 안내드립니다."></textarea></div>
+      <div class="row" style="margin-top:12px">
+        <div><label>배너 노출 시작일</label><input type="date" id="ntStart"></div>
+        <div><label>배너 노출 종료일</label><input type="date" id="ntEnd"></div>
+        <div style="display:flex;align-items:flex-end;padding-bottom:6px"><label style="display:flex;align-items:center;gap:8px;margin:0;font-size:14.5px"><input type="checkbox" id="ntBanner" style="width:18px;height:18px"> 메인 배너 표시</label></div>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:8px">
+        <button class="btn red" id="btnNtSave">공지 저장</button>
+        <button class="btn ghost" id="btnNtCancel" hidden>수정 취소</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="bar"><h2 style="margin:0">등록된 공지</h2></div>
+      <div id="ntList"></div>
+    </div>
+  </section>
+
+  <!-- 비급여 -->
+  <section id="tab-nb" hidden>
+    <div class="card">
+      <h2>비급여 진료비용</h2>
+      <p class="hint">금액을 수정하면 해당 항목의 변경일이 자동으로 오늘 날짜가 됩니다. 아래 저장 버튼을 눌러야 홈페이지에 반영됩니다.</p>
+      <div id="nbGroups"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn ghost" id="btnNbAddGroup">+ 분류 추가</button>
+        <button class="btn red" id="btnNbSave">비급여 전체 저장</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 칼럼 초안 -->
+  <section id="tab-dr" hidden>
+    <div class="card">
+      <h2>건강칼럼 초안 쓰기</h2>
+      <div class="notice-note">작성하신 초안은 <b>하오커뮤니케이션이 의료광고 규정(의료법 제56조)에 맞게 검수·보강한 뒤</b> 홈페이지 건강칼럼에 발행합니다. 발행되면 상태가 "발행됨"으로 바뀝니다.</div>
+      <div class="row">
+        <div style="flex:2.2"><label>제목</label><input type="text" id="drTitle" placeholder="예: 투석 환자의 여름철 수분 관리"></div>
+        <div><label>카테고리</label><select id="drCat"><option>투석 실전</option><option>투석 식사</option><option>콩팥병·검사 수치</option><option>내과·검진</option></select></div>
+      </div>
+      <div style="margin-top:12px"><label>본문</label><textarea id="drBody" style="min-height:220px" placeholder="자유롭게 작성해 주세요. 문단은 빈 줄로 구분하시면 됩니다."></textarea></div>
+      <div style="margin-top:16px"><button class="btn red" id="btnDrSave">초안 저장</button></div>
+    </div>
+    <div class="card">
+      <h2>초안 목록</h2>
+      <div id="drList"></div>
+    </div>
+  </section>
+</main>
+
+<div class="msg" id="msg"></div>
+
+<script>
+'use strict';
+var CFG={owner:'SEOLYN-JANG',repo:'drnoh',branch:'main'};
+var API='https://api.github.com/repos/'+CFG.owner+'/'+CFG.repo+'/contents/';
+var PATHS={nt:'data/notices.json',nb:'data/nonbenefit.json',dr:'data/drafts.json'};
+var KEY=localStorage.getItem('nohAdminKey')||'';
+var S={nt:null,nb:null,dr:null,sha:{},editing:null};
+
+function $(id){return document.getElementById(id);}
+function today(){var d=new Date();return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+var msgT=null;
+function toast(t,long){var m=$('msg');m.textContent=t;m.classList.add('show');clearTimeout(msgT);msgT=setTimeout(function(){m.classList.remove('show');},long?5200:2600);}
+
+function hdr(){return{'Authorization':'Bearer '+KEY,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};}
+function enc(s){var u=new TextEncoder().encode(s),b='';for(var i=0;i<u.length;i+=0x8000)b+=String.fromCharCode.apply(null,u.subarray(i,i+0x8000));return btoa(b);}
+function dec(b){var s=atob(String(b).replace(/\s/g,'')),u=new Uint8Array(s.length);for(var i=0;i<s.length;i++)u[i]=s.charCodeAt(i);return new TextDecoder().decode(u);}
+
+function ghGet(p){
+  return fetch(API+p+'?ref='+CFG.branch,{headers:hdr(),cache:'no-store'}).then(function(r){
+    if(r.status===401||r.status===403)throw{auth:true,msg:'관리자 키가 올바르지 않거나 만료되었습니다.'};
+    if(!r.ok)throw{msg:'데이터를 불러오지 못했습니다 ('+r.status+')'};
+    return r.json();
+  }).then(function(j){S.sha[p]=j.sha;return JSON.parse(dec(j.content));});
+}
+function ghPut(p,obj,msg){
+  var body={message:msg,branch:CFG.branch,content:enc(JSON.stringify(obj,null,2))};
+  if(S.sha[p])body.sha=S.sha[p];
+  return fetch(API+p,{method:'PUT',headers:hdr(),body:JSON.stringify(body)}).then(function(r){
+    if(r.status===409||r.status===422)throw{msg:'다른 곳에서 먼저 저장했습니다. 페이지를 새로고침한 뒤 다시 시도해 주세요.'};
+    if(r.status===401||r.status===403)throw{auth:true,msg:'관리자 키가 올바르지 않거나 만료되었습니다.'};
+    if(!r.ok)throw{msg:'저장 실패 ('+r.status+')'};
+    return r.json();
+  }).then(function(j){S.sha[p]=j.content.sha;});
+}
+
+/* ---------- 공지 ---------- */
+function ntResetForm(){S.editing=null;$('ntFormTitle').textContent='새 공지 등록';$('ntTitle').value='';$('ntType').value='안내';$('ntBody').value='';$('ntStart').value=today();$('ntEnd').value='';$('ntBanner').checked=false;$('btnNtCancel').hidden=true;}
+function ntRender(){
+  var box=$('ntList');box.innerHTML='';
+  var items=(S.nt.items||[]).slice().sort(function(a,b){return String(b.created||'').localeCompare(String(a.created||''));});
+  if(!items.length){box.innerHTML='<p class="sub">등록된 공지가 없습니다.</p>';return;}
+  var t=document.createElement('table');
+  t.innerHTML='<thead><tr><th>유형</th><th>제목</th><th>배너</th><th>노출 기간</th><th style="width:130px"></th></tr></thead>';
+  var tb=document.createElement('tbody');
+  items.forEach(function(n){
+    var tr=document.createElement('tr');
+    var td1=document.createElement('td');var tg=document.createElement('span');tg.className='tag'+(n.type==='휴진'?' rest':'');tg.textContent=n.type||'안내';td1.appendChild(tg);
+    var td2=document.createElement('td');var bb=document.createElement('div');bb.className='list-title';bb.textContent=n.title;var ss=document.createElement('div');ss.className='sub';ss.textContent='등록 '+(n.created||'');td2.appendChild(bb);td2.appendChild(ss);
+    var td3=document.createElement('td');td3.textContent=n.banner?'표시':'-';
+    var td4=document.createElement('td');td4.className='sub';td4.textContent=(n.start||'')+' ~ '+(n.end||'');
+    var td5=document.createElement('td');
+    var be=document.createElement('button');be.className='btn ghost sm';be.textContent='수정';
+    be.onclick=function(){S.editing=n.id;$('ntFormTitle').textContent='공지 수정';$('ntTitle').value=n.title||'';$('ntType').value=n.type||'안내';$('ntBody').value=n.body||'';$('ntStart').value=n.start||'';$('ntEnd').value=n.end||'';$('ntBanner').checked=!!n.banner;$('btnNtCancel').hidden=false;window.scrollTo({top:0,behavior:'smooth'});};
+    var bd=document.createElement('button');bd.className='btn ghost sm';bd.style.marginLeft='6px';bd.textContent='삭제';
+    bd.onclick=function(){if(!confirm('공지 "'+n.title+'"을(를) 삭제할까요?'))return;S.nt.items=S.nt.items.filter(function(x){return x.id!==n.id;});ghPut(PATHS.nt,S.nt,'notice: delete '+n.id).then(function(){ntRender();toast('삭제되었습니다. 사이트에는 1~5분 내 반영됩니다.');}).catch(fail);};
+    td5.appendChild(be);td5.appendChild(bd);
+    tr.appendChild(td1);tr.appendChild(td2);tr.appendChild(td3);tr.appendChild(td4);tr.appendChild(td5);
+    tb.appendChild(tr);
+  });
+  t.appendChild(tb);box.appendChild(t);
+}
+$('btnNtSave').onclick=function(){
+  var title=$('ntTitle').value.trim();if(!title){toast('제목을 입력해 주세요.');return;}
+  var item={id:S.editing||('n'+Date.now().toString(36)),title:title,type:$('ntType').value,body:$('ntBody').value.trim(),start:$('ntStart').value,end:$('ntEnd').value,banner:$('ntBanner').checked,created:null};
+  if($('ntBanner').checked&&!$('ntEnd').value){toast('배너를 표시하려면 노출 종료일을 정해 주세요.');return;}
+  if(S.editing){var old=S.nt.items.find(function(x){return x.id===S.editing;});item.created=old?old.created:today();S.nt.items=S.nt.items.map(function(x){return x.id===S.editing?item:x;});}
+  else{item.created=today();S.nt.items.push(item);}
+  this.disabled=true;var btn=this;
+  ghPut(PATHS.nt,S.nt,'notice: '+(S.editing?'update':'add')+' "'+title+'"').then(function(){ntResetForm();ntRender();toast('공지가 저장되었습니다. 사이트에는 1~5분 내 반영됩니다.',true);}).catch(fail).finally(function(){btn.disabled=false;});
+};
+$('btnNtCancel').onclick=ntResetForm;
+
+/* ---------- 비급여 ---------- */
+function nbRow(it){
+  var tr=document.createElement('tr');
+  var td1=document.createElement('td');var i1=document.createElement('input');i1.type='text';i1.value=it.name||'';i1.placeholder='항목명';td1.appendChild(i1);
+  var td2=document.createElement('td');var i2=document.createElement('input');i2.type='number';i2.value=(it.price!=null?it.price:'');i2.min='0';i2.step='100';td2.appendChild(i2);
+  var td3=document.createElement('td');var i3=document.createElement('input');i3.type='date';i3.value=it.date||today();td3.appendChild(i3);
+  i2.addEventListener('input',function(){i3.value=today();});
+  var td4=document.createElement('td');var bx=document.createElement('button');bx.className='btn ghost sm';bx.textContent='삭제';bx.onclick=function(){tr.remove();};td4.appendChild(bx);
+  tr.appendChild(td1);tr.appendChild(td2);tr.appendChild(td3);tr.appendChild(td4);
+  return tr;
+}
+function nbGroupEl(g){
+  var d=document.createElement('div');d.className='grp';
+  var gh=document.createElement('div');gh.className='gh';
+  var gi=document.createElement('input');gi.type='text';gi.value=g.name||'';gi.placeholder='분류명 (예: 예방접종)';
+  var gx=document.createElement('button');gx.className='btn ghost sm';gx.textContent='분류 삭제';gx.onclick=function(){if(confirm('"'+gi.value+'" 분류 전체를 삭제할까요?'))d.remove();};
+  gh.appendChild(gi);gh.appendChild(gx);d.appendChild(gh);
+  var t=document.createElement('table');t.innerHTML='<thead><tr><th>항목</th><th style="width:140px">비용(원)</th><th style="width:160px">최종 변경일</th><th style="width:70px"></th></tr></thead>';
+  var tb=document.createElement('tbody');(g.items||[]).forEach(function(it){tb.appendChild(nbRow(it));});t.appendChild(tb);d.appendChild(t);
+  var ba=document.createElement('button');ba.className='btn ghost sm';ba.style.marginTop='10px';ba.textContent='+ 항목 추가';ba.onclick=function(){tb.appendChild(nbRow({date:today()}));};
+  d.appendChild(ba);
+  return d;
+}
+function nbRender(){var box=$('nbGroups');box.innerHTML='';(S.nb.groups||[]).forEach(function(g){box.appendChild(nbGroupEl(g));});}
+$('btnNbAddGroup').onclick=function(){$('nbGroups').appendChild(nbGroupEl({name:'',items:[{date:today()}]}));};
+$('btnNbSave').onclick=function(){
+  var groups=[];var bad=false;
+  $('nbGroups').querySelectorAll('.grp').forEach(function(d){
+    var name=d.querySelector('.gh input').value.trim();
+    var items=[];
+    d.querySelectorAll('tbody tr').forEach(function(tr){
+      var ins=tr.querySelectorAll('input');
+      var nm=ins[0].value.trim(),pr=ins[1].value,dt=ins[2].value;
+      if(!nm)return;
+      if(pr===''||isNaN(Number(pr))){bad=true;return;}
+      items.push({name:nm,price:Number(pr),date:dt||today()});
+    });
+    if(name&&items.length)groups.push({name:name,items:items});
+  });
+  if(bad){toast('비용이 비어 있는 항목이 있습니다. 숫자로 입력해 주세요.');return;}
+  if(!groups.length){toast('저장할 항목이 없습니다.');return;}
+  S.nb.groups=groups;S.nb.updated=today();
+  this.disabled=true;var btn=this;
+  ghPut(PATHS.nb,S.nb,'nonbenefit: update '+today()).then(function(){nbRender();toast('비급여 수가가 저장되었습니다. 사이트에는 1~5분 내 반영됩니다.',true);}).catch(fail).finally(function(){btn.disabled=false;});
+};
+
+/* ---------- 칼럼 초안 ---------- */
+function drRender(){
+  var box=$('drList');box.innerHTML='';
+  var items=(S.dr.items||[]).slice().sort(function(a,b){return String(b.created||'').localeCompare(String(a.created||''));});
+  if(!items.length){box.innerHTML='<p class="sub">저장된 초안이 없습니다.</p>';return;}
+  items.forEach(function(n){
+    var d=document.createElement('div');d.style.cssText='border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px';
+    var bar=document.createElement('div');bar.style.cssText='display:flex;align-items:center;gap:10px;flex-wrap:wrap';
+    var tg=document.createElement('span');tg.className='tag '+(n.status==='발행됨'?'ok':'wait');tg.textContent=n.status||'대기';
+    var tt=document.createElement('span');tt.className='list-title';tt.textContent=n.title;
+    var mm=document.createElement('span');mm.className='sub';mm.textContent=(n.category||'')+' · '+(n.created||'');
+    bar.appendChild(tg);bar.appendChild(tt);bar.appendChild(mm);
+    var acts=document.createElement('span');acts.style.marginLeft='auto';
+    var bv=document.createElement('button');bv.className='btn ghost sm';bv.textContent='내용 보기';
+    var bodyEl=null;
+    bv.onclick=function(){if(bodyEl){bodyEl.remove();bodyEl=null;bv.textContent='내용 보기';return;}bodyEl=document.createElement('div');bodyEl.className='draft-body';bodyEl.textContent=n.body||'';d.appendChild(bodyEl);bv.textContent='접기';};
+    var bs=document.createElement('button');bs.className='btn ghost sm';bs.style.marginLeft='6px';bs.textContent=(n.status==='발행됨')?'대기로':'발행됨 표시';
+    bs.onclick=function(){n.status=(n.status==='발행됨')?'대기':'발행됨';ghPut(PATHS.dr,S.dr,'draft: status '+n.id).then(drRender).catch(fail);};
+    var bd=document.createElement('button');bd.className='btn ghost sm';bd.style.marginLeft='6px';bd.textContent='삭제';
+    bd.onclick=function(){if(!confirm('초안 "'+n.title+'"을(를) 삭제할까요?'))return;S.dr.items=S.dr.items.filter(function(x){return x.id!==n.id;});ghPut(PATHS.dr,S.dr,'draft: delete '+n.id).then(function(){drRender();toast('삭제되었습니다.');}).catch(fail);};
+    acts.appendChild(bv);acts.appendChild(bs);acts.appendChild(bd);bar.appendChild(acts);
+    d.appendChild(bar);box.appendChild(d);
+  });
+}
+$('btnDrSave').onclick=function(){
+  var title=$('drTitle').value.trim();var body=$('drBody').value.trim();
+  if(!title){toast('제목을 입력해 주세요.');return;}
+  if(!body){toast('본문을 입력해 주세요.');return;}
+  S.dr.items.push({id:'d'+Date.now().toString(36),title:title,category:$('drCat').value,body:body,status:'대기',created:today()});
+  this.disabled=true;var btn=this;
+  ghPut(PATHS.dr,S.dr,'draft: add "'+title+'"').then(function(){$('drTitle').value='';$('drBody').value='';drRender();toast('초안이 저장되었습니다. 하오커뮤니케이션이 검수 후 발행합니다.',true);}).catch(fail).finally(function(){btn.disabled=false;});
+};
+
+/* ---------- 공통 ---------- */
+function fail(e){if(e&&e.auth){toast(e.msg,true);logout(false);return;}toast((e&&e.msg)||'오류가 발생했습니다.',true);}
+function logout(clear){if(clear!==false)localStorage.removeItem('nohAdminKey');KEY='';$('mainView').hidden=true;$('btnLogout').hidden=true;$('loginView').hidden=false;}
+$('btnLogout').onclick=function(){logout();};
+document.querySelectorAll('.tab').forEach(function(b){
+  b.onclick=function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x===b);});
+    ['nt','nb','dr'].forEach(function(k){$('tab-'+k).hidden=(b.dataset.tab!==k);});
+  };
+});
+function enter(){
+  $('loginErr').hidden=true;
+  Promise.all([ghGet(PATHS.nt),ghGet(PATHS.nb),ghGet(PATHS.dr)]).then(function(r){
+    S.nt=r[0];S.nb=r[1];S.dr=r[2];
+    if(!S.nt.items)S.nt.items=[];if(!S.dr.items)S.dr.items=[];if(!S.nb.groups)S.nb.groups=[];
+    ntResetForm();ntRender();nbRender();drRender();
+    $('loginView').hidden=true;$('mainView').hidden=false;$('btnLogout').hidden=false;
+  }).catch(function(e){
+    KEY='';localStorage.removeItem('nohAdminKey');
+    $('loginErr').textContent=(e&&e.msg)||'접속에 실패했습니다.';$('loginErr').hidden=false;
+    $('loginView').hidden=false;
+  });
+}
+$('btnLogin').onclick=function(){var v=$('inKey').value.trim();if(!v){toast('관리자 키를 입력해 주세요.');return;}KEY=v;localStorage.setItem('nohAdminKey',v);enter();};
+$('inKey').addEventListener('keydown',function(e){if(e.key==='Enter')$('btnLogin').click();});
+if(KEY)enter();
+</script>
+</body>
+</html>

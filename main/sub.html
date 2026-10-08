@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>노승현내과의원</title>
+<script>
+/* 구 홈페이지 주소(main/sub.html?pageCode=N) → 새 페이지 리다이렉트 */
+(function(){
+  var map={
+    1:'about.html',2:'doctors.html',3:'about.html',4:'dialysis-center.html',
+    5:'location.html',6:'location.html',7:'location.html',
+    8:'hemodialysis.html',9:'dialysis-center.html',
+    10:'nephrology.html',11:'nephrology.html',
+    12:'hypertension.html',13:'hypertension.html',14:'hypertension.html',
+    15:'diabetes.html',16:'diabetes.html',17:'diabetes.html',
+    18:'checkup.html',19:'notices.html',20:'columns/index.html',
+    21:'faq.html',22:'nonbenefit.html'
+  };
+  var m=/[?&]pageCode=(\d+)/.exec(location.search);
+  var dest=(m&&map[Number(m[1])])||'index.html';
+  location.replace('../'+dest);
+})();
+</script>
+</head>
+<body><p><a href="../index.html">노승현내과의원 홈페이지로 이동합니다…</a></p></body>
+</html>

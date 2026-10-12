@@ -337,7 +337,7 @@ details .a{padding:0 0 18px;color:var(--body);font-size:16.5px}
 @media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
 
 /* ---------- 건강칼럼 목록 ---------- */
-.col-cat{margin-bottom:52px}
+.col-cat{margin-bottom:52px;scroll-margin-top:96px}
 .col-cat h2{font-size:25px;margin-bottom:20px;position:relative;padding-left:18px}
 .col-cat h2::before{content:"";position:absolute;left:0;top:7px;width:6px;height:20px;background:var(--red);border-radius:2px}
 .cat-sub{font-size:15px;color:var(--muted);margin:-12px 0 22px 18px}

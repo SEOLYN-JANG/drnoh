@@ -366,6 +366,26 @@ details .a{padding:0 0 18px;color:var(--body);font-size:16.5px}
 .col-s:hover .arr{color:var(--red-lite)}
 @media(max-width:900px){.col-combo{grid-template-columns:1fr}.col-feat{min-height:300px}.col-s{padding:13px 16px}}
 
+/* ---------- 진료실 이야기(원장 에세이) ---------- */
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.story-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;box-shadow:var(--sh);overflow:hidden}
+.story-card::before{content:"\201C";position:absolute;right:20px;top:2px;font-size:68px;font-weight:800;color:rgba(215,0,15,.09);font-family:Georgia,serif;line-height:1}
+a.story-card{transition:transform .16s,box-shadow .16s}
+a.story-card:hover{transform:translateY(-3px);box-shadow:var(--sh-lg)}
+.st-tag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.14em;color:var(--red);margin-bottom:10px}
+.story-card h3{font-size:19.5px;line-height:1.45;margin:0 0 10px;color:var(--ink)}
+.story-card p{font-size:14.5px;color:var(--muted);line-height:1.7;margin:0 0 16px}
+.st-meta{display:flex;align-items:center;gap:9px;border-top:1px solid var(--line);padding-top:13px}
+.st-avatar{width:30px;height:30px;border-radius:50%;background:var(--char);color:#fff;font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+.st-meta b{font-size:13.5px;color:var(--ink)}
+.st-meta span{font-size:12.5px;color:var(--muted)}
+@media(max-width:900px){.story-grid{grid-template-columns:1fr}}
+.essay-sign{display:flex;justify-content:space-between;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 12px 12px 0;padding:18px 22px;margin:26px 0 0}
+.essay-sign b{font-size:16px;color:var(--ink);display:block}
+.essay-sign span{font-size:13.5px;color:var(--muted)}
+.essay-sign a{font-size:14px;font-weight:700;color:var(--red);flex:none}
+@media(max-width:700px){.essay-sign{flex-direction:column;align-items:flex-start}}
+
 /* ---------- 칼럼 클로징 블록 ---------- */
 .col-related{margin:34px 0 18px;padding:18px 22px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 10px 10px 0;font-size:15.5px;line-height:1.9}
 .col-related strong{color:var(--ink)}

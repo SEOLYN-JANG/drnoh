@@ -49,6 +49,7 @@ p:last-child{margin-bottom:0}
 .topbar{background:var(--panel);color:var(--muted);font-size:13.5px;border-bottom:1px solid var(--line)}
 .topbar .wrap{display:flex;justify-content:space-between;align-items:center;min-height:40px;gap:14px}
 .topbar-item{display:inline-flex;align-items:center;gap:7px}
+.topbar-tels{display:inline-flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center}
 .topbar a.topbar-item{color:var(--ink);font-weight:700}
 .topbar a.topbar-item .ic{color:var(--red)}
 @media(max-width:640px){.topbar .wrap span.topbar-item{display:none}.topbar .wrap{justify-content:center}}
